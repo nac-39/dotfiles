@@ -1,0 +1,9 @@
+{
+  "title": "英数字キーボード用の設定",
+  "rules": [
+    {
+      "description": "FILCO用の設定",
+      "manipulators": [{}]
+    }
+  ]
+}
