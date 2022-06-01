@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# set symbolic link
 SCRIPT_DIR=$(cd $(dirname $0) && pwd)
 VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
 
@@ -8,3 +9,11 @@ ln -s "$SCRIPT_DIR/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
 
 rm "$VSCODE_SETTING_DIR/keybindings.json"
 ln -s "$SCRIPT_DIR/keybindings.json" "${VSCODE_SETTING_DIR}/keybindings.json"
+
+# install extensions and update
+cat ./extentions.txt | while read line
+do
+    code --install-extension $line
+done
+
+code --list-extensions > extensions.txt
