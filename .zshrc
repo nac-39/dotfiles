@@ -19,7 +19,7 @@ setopt print_eight_bit
 # zsh-syntax-highlighting
 #########################
 # コマンドに色つける
-source /Users/nanaco.s/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${HOME}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Declare the variable
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -94,10 +94,10 @@ setopt auto_pushd
 # 何かのソフトウェア用？
 ####################
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/nanaco.s/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nanaco.s/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '${HOME}/google-cloud-sdk/path.zsh.inc' ]; then . '${HOME}/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/nanaco.s/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nanaco.s/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '${HOME}/google-cloud-sdk/completion.zsh.inc' ]; then . '${HOME}/google-cloud-sdk/completion.zsh.inc'; fi
 
 #starship用
 #eval "$(starship init zsh)"
