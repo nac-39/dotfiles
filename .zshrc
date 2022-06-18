@@ -3,8 +3,13 @@
 ###########
 # パスとgitのブランチを表示
 setopt PROMPT_SUBST
-source ~/.zsh/.git-prompt.sh
-PROMPT='%F{magenta}%n%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f 
+source ~/.zsh/git-prompt.sh
+# git-completionの読み込み
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
+
+PROMPT='%F{cyan}%n%f@ubuntu %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f 
 %#%  '
 
 # 日本語が文字化けしないようにする
@@ -18,9 +23,6 @@ setopt print_eight_bit
 #########################
 # zsh-syntax-highlighting
 #########################
-# コマンドに色つける
-source ${HOME}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Declare the variable
 typeset -A ZSH_HIGHLIGHT_STYLES
 # エイリアスコマンドのハイライト
@@ -103,3 +105,6 @@ if [ -f '${HOME}/google-cloud-sdk/completion.zsh.inc' ]; then . '${HOME}/google-
 #eval "$(starship init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# zsh-syntax-hylighting(コマンドなどに色付け)
+source /home/nanaco/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
