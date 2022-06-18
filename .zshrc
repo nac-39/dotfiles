@@ -9,7 +9,7 @@ fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 autoload -Uz compinit && compinit
 
-PROMPT='%F{cyan}%n%f@ubuntu %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f 
+PROMPT='%F{cyan}%n%f%F{yellow}@%fubuntu %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f 
 %#%  '
 
 # 日本語が文字化けしないようにする
