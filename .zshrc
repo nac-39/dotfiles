@@ -1,9 +1,18 @@
-###########
+##########
 # 見た目関連
 ###########
 # パスとgitのブランチを表示
 setopt PROMPT_SUBST
+
+##################
+# git関連
+##################
 source ~/.zsh/.git-prompt.sh
+# git-completionの読み込み
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
+
 PROMPT='%F{magenta}%n%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f 
 %#%  '
 
@@ -19,7 +28,7 @@ setopt print_eight_bit
 # zsh-syntax-highlighting
 #########################
 # コマンドに色つける
-source ${HOME}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Declare the variable
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -48,6 +57,7 @@ ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]='standout'
 ######
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # PYTHON_HOMEにインストールしたpythonのパスを指定する
@@ -78,9 +88,14 @@ alias pip='pip3'
 alias ls='ls -FG'
 alias ll='ls -alFG'
 
+# rmは丁寧に扱う
+alias rm="rm -i"
+
 # docker-composeのエイリアス
 alias doc='docker-compose' 
 
+# Intel版HomeBrewのエイリアス
+alias intelBrew='arch -x86_64 /usr/local/bin/brew'
 
 ##########
 # zshの設定

@@ -1,0 +1,236 @@
+{
+  "code-runner.runInTerminal": true,
+  "code-runner.preserveFocus": false,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc *.c -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+
+    
+    
+      // ---------- Language ----------
+  
+      "[tex]": {
+          // スニペット補完中にも補完を使えるようにする
+          "editor.suggest.snippetsPreventQuickSuggestions": false,
+          // インデント幅を2にする
+          "editor.tabSize": 2
+      },
+  
+      "[latex]": {
+          // スニペット補完中にも補完を使えるようにする
+          "editor.suggest.snippetsPreventQuickSuggestions": false,
+          // インデント幅を2にする
+          "editor.tabSize": 2
+      },
+  
+      "[bibtex]": {
+          // インデント幅を2にする
+          "editor.tabSize": 2
+      },
+  
+  
+      // ---------- LaTeX Workshop ----------
+  
+      // 使用パッケージのコマンドや環境の補完を有効にする
+      "latex-workshop.intellisense.package.enabled": true,
+  
+      // 生成ファイルを削除するときに対象とするファイル
+      // デフォルト値に "*.synctex.gz" を追加
+      "latex-workshop.latex.clean.fileTypes": [
+          "*.aux",
+          "*.bbl",
+          "*.blg",
+          "*.idx",
+          "*.ind",
+          "*.lof",
+          "*.lot",
+          "*.out",
+          "*.toc",
+          "*.acn",
+          "*.acr",
+          "*.alg",
+          "*.glg",
+          "*.glo",
+          "*.gls",
+          "*.ist",
+          "*.fls",
+          "*.log",
+          "*.fdb_ptex2pdf",
+          "*.snm",
+          "*.nav",
+          "*.dvi",
+          "*.synctex.gz"
+      ],
+  
+      // 生成ファイルを "out" ディレクトリに吐き出す
+      "latex-workshop.latex.outDir": "out",
+  
+      // ビルドのレシピ
+      "latex-workshop.latex.recipes": [
+          {
+              "name": "ptex2pdf",
+              "tools": [
+                  "ptex2pdf"
+              ]
+          },
+      ],
+  
+      // ビルドのレシピに使われるパーツ
+      "latex-workshop.latex.tools": [
+          {
+              "name": "ptex2pdf",
+              "command": "ptex2pdf",
+              "args": [
+                  "-silent",
+                  "-outdir=%OUTDIR%",
+                  "%DOC%"
+              ],
+          },
+      ],
+  
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter-notebook",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    
+  },
+  "code-runner.languageIdToFileExtensionMap": {
+
+    "bat": ".bat",
+    "powershell": ".ps1",
+    "typescript": ".ts"
+  },
+  "editor.accessibilitySupport": "off",
+  // "[latex]": {
+
+
+  //   "editor.formatOnPaste": false,
+  //   "editor.suggestSelection": "recentlyUsedByPrefix"
+  // }
+},
+"editor.suggestSelection": "first",
+"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+"workbench.editorAssociations": [
+  {
+    "viewType": "jupyter-notebook",
+    "filenamePattern": "*.ipynb"
+  }
+],
+"editor.accessibilitySupport": "off",
+"[python]": {
+  "editor.wordBasedSuggestions": false
+},
+"workbench.preferredDarkColorTheme": "Abyss",
+"[json]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"bracketPairColorizer.depreciation-notice": false,
+"files.associations": {
+  "*.js": "javascript"
+},
+"[javascript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[html]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[typescriptreact]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"tabnine.experimentalAutoImports": true,
+"prettier.printWidth": 200,
+"editor.fontFamily": "'JetBrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
+"workbench.colorTheme": "Iceberg",
+"workbench.colorCustomizations": {
+"[Iceberg]": {
+  "symbolIcon.functionForeground": "#ff0000"
+}
+},
+"redhat.telemetry.enabled": false,
+"window.zoomLevel": 1,
+"jupyter.alwaysTrustNotebooks": true
+
+}
