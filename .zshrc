@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 ##########
 # 見た目関連
 ###########
@@ -97,6 +99,12 @@ alias doc='docker-compose'
 # Intel版HomeBrewのエイリアス
 alias intelBrew='arch -x86_64 /usr/local/bin/brew'
 
+# LINE Notifyのエイリアス
+alias line_notify="${HOME}/utils/line_notify/notify.sh"
+
+# venvのエイリアス
+alias venv="python -m venv"
+
 ##########
 # zshの設定
 ##########
@@ -118,3 +126,6 @@ if [ -f '${HOME}/google-cloud-sdk/completion.zsh.inc' ]; then . '${HOME}/google-
 #eval "$(starship init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

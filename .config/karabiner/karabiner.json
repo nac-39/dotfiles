@@ -623,14 +623,14 @@
                 },
                 "rules": [
                     {
-                        "description": "Change control+ijkl to arrow keys",
+                        "description": "Change control+option+ijkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_control"
+                                            "left_control",
                                         ],
                                         "optional": [
                                             "any"

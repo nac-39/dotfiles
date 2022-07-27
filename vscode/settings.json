@@ -53,184 +53,179 @@
     "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
 
-    
-    
-      // ---------- Language ----------
-  
-      "[tex]": {
-          // スニペット補完中にも補完を使えるようにする
-          "editor.suggest.snippetsPreventQuickSuggestions": false,
-          // インデント幅を2にする
-          "editor.tabSize": 2
-      },
-  
-      "[latex]": {
-          // スニペット補完中にも補完を使えるようにする
-          "editor.suggest.snippetsPreventQuickSuggestions": false,
-          // インデント幅を2にする
-          "editor.tabSize": 2
-      },
-  
-      "[bibtex]": {
-          // インデント幅を2にする
-          "editor.tabSize": 2
-      },
-  
-  
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.editorAssociations": [
+      {
+        "viewType": "jupyter-notebook",
+        "filenamePattern": "*.ipynb"
+      }
+    ],
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.codeAction.showDocumentation": {
+      "enable": true
+    },
+
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "code-runner.languageIdToFileExtensionMap": {
+      "bat": ".bat",
+      "powershell": ".ps1",
+      "typescript": ".ts"
+    },
+    "editor.accessibilitySupport": "off",
+    // ---------- Language ----------
+
+    "[tex]": {
+      // スニペット補完中にも補完を使えるようにする
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      // インデント幅を2にする
+      "editor.tabSize": 2
+    },
+
+    "[latex]": {
+      // スニペット補完中にも補完を使えるようにする
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      // インデント幅を2にする
+      "editor.tabSize": 2
+    },
+
+    "[bibtex]": {
+      // インデント幅を2にする
+      "editor.tabSize": 2
+    },
+  },
       // ---------- LaTeX Workshop ----------
-  
-      // 使用パッケージのコマンドや環境の補完を有効にする
-      "latex-workshop.intellisense.package.enabled": true,
-  
-      // 生成ファイルを削除するときに対象とするファイル
-      // デフォルト値に "*.synctex.gz" を追加
-      "latex-workshop.latex.clean.fileTypes": [
-          "*.aux",
-          "*.bbl",
-          "*.blg",
-          "*.idx",
-          "*.ind",
-          "*.lof",
-          "*.lot",
-          "*.out",
-          "*.toc",
-          "*.acn",
-          "*.acr",
-          "*.alg",
-          "*.glg",
-          "*.glo",
-          "*.gls",
-          "*.ist",
-          "*.fls",
-          "*.log",
-          "*.fdb_ptex2pdf",
-          "*.snm",
-          "*.nav",
-          "*.dvi",
-          "*.synctex.gz"
-      ],
-  
-      // 生成ファイルを "out" ディレクトリに吐き出す
-      "latex-workshop.latex.outDir": "out",
-  
-      // ビルドのレシピ
-      "latex-workshop.latex.recipes": [
-          {
-              "name": "ptex2pdf",
-              "tools": [
-                  "ptex2pdf"
-              ]
-          },
-      ],
-  
-      // ビルドのレシピに使われるパーツ
-      "latex-workshop.latex.tools": [
-          {
-              "name": "ptex2pdf",
-              "command": "ptex2pdf",
-              "args": [
-                  "-silent",
-                  "-outdir=%OUTDIR%",
-                  "%DOC%"
-              ],
-          },
-      ],
-  
+
+    // 使用パッケージのコマンドや環境の補完を有効にする
+    "latex-workshop.intellisense.package.enabled": true,
+
+    // 生成ファイルを削除するときに対象とするファイル
+    // デフォルト値に "*.synctex.gz" を追加
+    "latex-workshop.latex.clean.fileTypes": [
+      "*.aux",
+      "*.bbl",
+      "*.blg",
+      "*.idx",
+      "*.ind",
+      "*.lof",
+      "*.lot",
+      "*.out",
+      "*.toc",
+      "*.acn",
+      "*.acr",
+      "*.alg",
+      "*.glg",
+      "*.glo",
+      "*.gls",
+      "*.ist",
+      "*.fls",
+      "*.log",
+      "*.fdb_ptex2pdf",
+      "*.snm",
+      "*.nav",
+      "*.dvi",
+      "*.synctex.gz"
+    ],
+
+    // 生成ファイルを "out" ディレクトリに吐き出す
+    "latex-workshop.latex.outDir": "out",
+
+    // ビルドのレシピ
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "ptex2pdf",
+        "tools": ["ptex2pdf"]
+      }
+    ],
+    // ビルドのレシピの定義
+    "latex-workshop.latex.tools": [
+      {
+        "name": "ptex2pdf",
+        "command": "ptex2pdf",
+        "args": [
+          "-l",
+          "-ot",
+          // PDFジャンプしたいからsynctexを有効にする
+          "-kanji=utf8 -synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-output-directory",
+          "%OUTDIR%",
+          "%DOC%"
+        ]
+      }
+    ],
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+    "*.drawio": "vscode-drawio.editor"
   },
-  "[jsonc]": {
+  "editor.accessibilitySupport": "off",
+  "[python]": {
+    "editor.wordBasedSuggestions": false
+  },
+  "workbench.preferredDarkColorTheme": "Abyss",
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+  "bracketPairColorizer.depreciation-notice": false,
+  "files.associations": {
+    "*.js": "javascript"
   },
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter-notebook",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.codeAction.showDocumentation": {
-    "enable": true
-  },
-
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-    
   },
-  "code-runner.languageIdToFileExtensionMap": {
-
-    "bat": ".bat",
-    "powershell": ".ps1",
-    "typescript": ".ts"
+  "tabnine.experimentalAutoImports": true,
+  "prettier.printWidth": 200,
+  "editor.fontFamily": "'JetBrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
+  "workbench.colorCustomizations": {
+    "[Iceberg]": {
+      "symbolIcon.functionForeground": "#ff0000"
+    }
   },
-  "editor.accessibilitySupport": "off",
-  // "[latex]": {
-
-
-  //   "editor.formatOnPaste": false,
-  //   "editor.suggestSelection": "recentlyUsedByPrefix"
-  // }
-},
-"editor.suggestSelection": "first",
-"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-"workbench.editorAssociations": [
-  {
-    "viewType": "jupyter-notebook",
-    "filenamePattern": "*.ipynb"
-  }
-],
-"editor.accessibilitySupport": "off",
-"[python]": {
-  "editor.wordBasedSuggestions": false
-},
-"workbench.preferredDarkColorTheme": "Abyss",
-"[json]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"bracketPairColorizer.depreciation-notice": false,
-"files.associations": {
-  "*.js": "javascript"
-},
-"[javascript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[typescript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[html]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[typescriptreact]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"tabnine.experimentalAutoImports": true,
-"prettier.printWidth": 200,
-"editor.fontFamily": "'JetBrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
-"workbench.colorTheme": "Iceberg",
-"workbench.colorCustomizations": {
-"[Iceberg]": {
-  "symbolIcon.functionForeground": "#ff0000"
-}
-},
-"redhat.telemetry.enabled": false,
-"window.zoomLevel": 1,
-"jupyter.alwaysTrustNotebooks": true
-
+  "redhat.telemetry.enabled": false,
+  "jupyter.alwaysTrustNotebooks": true,
+  "git.ignoreLegacyWarning": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Iceberg",
+  "window.zoomLevel": 1,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.glyphMargin": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "security.workspace.trust.untrustedFiles": "open"
 }
