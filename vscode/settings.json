@@ -79,8 +79,10 @@
     },
 
     "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "python.sortImports.path": "/usr/local/bin/isort",
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": true,
+      "source.organizeImports": true,
     },
     "[typescriptreact]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -216,7 +218,6 @@
   "git.ignoreLegacyWarning": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Iceberg",
-  "window.zoomLevel": 1,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -225,7 +226,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[latex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "editor.formatOnSave": true,
   },
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "window.zoomLevel": 1
 }
