@@ -9,13 +9,14 @@ setopt PROMPT_SUBST
 ##################
 # git関連
 ##################
-source ~/.zsh/.git-prompt.sh
+source ~/.zsh/git-prompt.sh
 # git-completionの読み込み
 fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 autoload -Uz compinit && compinit
 
 PROMPT='%F{magenta}%n%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f 
+# for ubuntu PROMPT='%F{cyan}%n%f%F{yellow}@%fubuntu %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f 
 %#%  '
 
 # 日本語が文字化けしないようにする
