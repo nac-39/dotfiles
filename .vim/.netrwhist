@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/nanaco.s/workspace/portforio/src/views'
+let g:netrw_dirhist_7='/Users/nanaco.s/hogehoge'
+let g:netrw_dirhist_6='/Users/nanaco.s/.bash_sessions'
+let g:netrw_dirhist_5='/'
+let g:netrw_dirhist_4='/Users'
+let g:netrw_dirhist_3='/Users/nanaco.s'
+let g:netrw_dirhist_2='/Users/nanaco.s/config_backup'
+let g:netrw_dirhist_1='/Users/nanaco.s/.ssh'
