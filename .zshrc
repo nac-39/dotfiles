@@ -15,8 +15,14 @@ fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 autoload -Uz compinit && compinit
 
-PROMPT='%F{magenta}%n%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
+if [ -n "$SSH_CONNECTION" ]; then
+  PROMPT='%F{magenta}%n%f@%m%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
 %# '
+else
+  PROMPT='%F{magenta}%n%f%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
+%# '
+fi
+
 # 日本語が文字化けしないようにする
 export LANG=ja_JP.UTF-8
 
