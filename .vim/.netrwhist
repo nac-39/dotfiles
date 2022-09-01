@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/nanaco.s/workspace'
+let g:netrw_dirhist_9='/Users/nanaco.s/dotfiles/.vim/_settings'
 let g:netrw_dirhist_8='/Users/nanaco.s/workspace/portforio/src/views'
 let g:netrw_dirhist_7='/Users/nanaco.s/hogehoge'
 let g:netrw_dirhist_6='/Users/nanaco.s/.bash_sessions'
