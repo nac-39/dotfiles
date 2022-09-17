@@ -216,8 +216,6 @@
   "redhat.telemetry.enabled": false,
   "jupyter.alwaysTrustNotebooks": true,
   "git.ignoreLegacyWarning": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Iceberg",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -231,7 +229,7 @@
   },
   "security.workspace.trust.untrustedFiles": "open",
   "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.zoomLevel": 1,
   "markdown.marp.themes": [
@@ -246,5 +244,7 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "githubPullRequests.pullBranch": "never",
+  "workbench.colorTheme": "Iceberg"
 }
