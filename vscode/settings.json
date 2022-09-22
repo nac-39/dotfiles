@@ -231,7 +231,6 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
   "markdown.marp.themes": [
     "./mastering.css",
     "./nac-39.css"
@@ -246,5 +245,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "githubPullRequests.pullBranch": "never",
-  "workbench.colorTheme": "Iceberg"
+  "workbench.colorTheme": "Iceberg",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 1
 }

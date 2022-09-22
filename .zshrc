@@ -15,6 +15,9 @@ fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 autoload -Uz compinit && compinit
 
+# z-zshの読み込み
+source ~/.zsh/zsh-z.plugin.zsh
+zstyle ':completion:*' menu select
 if [ -n "$SSH_CONNECTION" ]; then
   PROMPT='%F{magenta}%n%f@%m%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
 %# '
