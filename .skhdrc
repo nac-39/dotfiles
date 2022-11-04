@@ -99,10 +99,18 @@ shift + alt - l : yabai -m window --swap east
 # shift + ctrl - w : yabai -m window --move rel:0:-20
 # shift + ctrl - d : yabai -m window --move rel:20:0
 # increase window size
-shift + alt - a : yabai -m window --resize left:-20:0
-shift + alt - s : yabai -m window --resize bottom:0:20
-shift + alt - w : yabai -m window --resize top:0:-20
-shift + alt - d : yabai -m window --resize right:20:0
+# shift + alt - a : yabai -m window --resize left:-20:0
+# shift + alt - s : yabai -m window --resize bottom:0:20
+# shift + alt - w : yabai -m window --resize top:0:-20
+# shift + alt - d : yabai -m window --resize right:20:0
+# manage stackline
+alt + ctrl - n : yabai -m window --focus stack.next
+alt + ctrl - p : yabai -m window --focus stack.prev
+alt + ctrl - s : yabai -m window --stack next
+alt + ctrl - left  : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
+alt + ctrl - down  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+alt + ctrl - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+alt + ctrl - right : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
 # decrease window size
 # shift + cmd - a : yabai -m window --resize left:20:0
 # shift + cmd - s : yabai -m window --resize bottom:0:-20
@@ -123,5 +131,7 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 # toggle window split type
 alt - e : yabai -m window --toggle split
 # float / unfloat window and restore position
-# alt - t : yabai -m window --toggle float && /tmp/yabai-restore/$(yabai -m query --windows --window | jq -re '.id').restore 2>/dev/null || true
-alt - t : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
+alt - t : yabai -m window --toggle float && /tmp/yabai-restore/$(yabai -m query --windows --window | jq -re '.id').restore 2>/dev/null || true
+# alt - t : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
+# focus next display
+shift + alt - space : yabai -m display --focus recent 

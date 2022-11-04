@@ -71,7 +71,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # PYTHON_HOMEにインストールしたpythonのパスを指定する
-export PYTHON_HOME="/Library/Frameworks/Python.framework/Version/3.9/bin"
+export PYTHON_HOME="/Users/nanaco.s/.pyenv/"
 export PATH="$PYTHON_HOME:$PATH"
 
 # nodebrew 
@@ -85,6 +85,8 @@ export PATH=/usr/local/bin/code:$PATH
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
 
+# flutter
+export  PATH=$PATH:~/.local/bin/flutter/bin
 
 
 ############
@@ -112,6 +114,12 @@ alias line_notify="${HOME}/utils/line_notify/notify.sh"
 
 # venvのエイリアス
 alias venv="python -m venv"
+
+# 一瞬でvscodeを開くエイリアス
+alias cr="code -r ."
+
+# vimでメモ取るエイリアス
+alias vimemo="nvim /tmp/memo.txt && cat /tmp/memo.txt | pbcopy && \rm /tmp/memo.txt"
 
 ##########
 # zshの設定
