@@ -121,7 +121,16 @@ alias cr="code -r ."
 # vimでメモ取るエイリアス
 alias vimemo="nvim /tmp/memo.txt && cat /tmp/memo.txt | pbcopy && \rm /tmp/memo.txt"
 
-##########
+# karabiner-elementsのcli
+alias karabiner_cli="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli"
+
+alias kli="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli --select-profile lily58"
+alias kmac="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli --select-profile Mac"
+alias kfi="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli --select-profile FILCO"
+
+# ある地点の天気を表示するエイリアス
+alias tenki="~/workspace/utility/tenki.sh"           ##########
+
 # zshの設定
 ##########
 # cd -の後にタブ補完でサジェストされるようにする
@@ -138,7 +147,7 @@ if [ -f '${HOME}/google-cloud-sdk/path.zsh.inc' ]; then . '${HOME}/google-cloud-
 if [ -f '${HOME}/google-cloud-sdk/completion.zsh.inc' ]; then . '${HOME}/google-cloud-sdk/completion.zsh.inc'; fi
 
 #starship用
-#eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -146,5 +155,19 @@ eval "$(anyenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# manにシンタックスハイライトをつける
+man() {
+        env \
+            LESS_TERMCAP_mb=$(printf "\e[1;33m") \
+            LESS_TERMCAP_md=$(printf "\e[1;33m") \
+            LESS_TERMCAP_me=$(printf "\e[0m") \
+            LESS_TERMCAP_se=$(printf "\e[0m") \
+            LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+            LESS_TERMCAP_ue=$(printf "\e[0m") \
+            LESS_TERMCAP_us=$(printf "\e[1;32m") \
+            man "$@"
+}
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+

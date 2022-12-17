@@ -183,8 +183,7 @@
   },
   "editor.accessibilitySupport": "off",
   "[python]": {
-    "editor.wordBasedSuggestions": false,
-    "editor.formatOnType": true
+    "editor.wordBasedSuggestions": false
   },
   "workbench.preferredDarkColorTheme": "Abyss",
   "[json]": {
@@ -195,7 +194,7 @@
     "*.js": "javascript"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -260,5 +259,8 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
 }

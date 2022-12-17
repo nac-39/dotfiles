@@ -13,6 +13,7 @@ require'packer'.startup(function()
   use 'obaland/vfiler.vim'
   use 'obaland/vfiler-fzf'
   use 'ibhagwan/fzf-lua'
+  use 'jiangmiao/auto-pairs'
   -- nvim-cmp
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-path"
