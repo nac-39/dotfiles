@@ -9,7 +9,8 @@ require'packer'.startup(function()
   use 'vim-airline/vim-airline-themes'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
-  use 'cocopon/iceberg.vim'
+  --  use 'cocopon/iceberg.vim'
+  use "jacoborus/tender.vim"
   use 'obaland/vfiler.vim'
   use 'obaland/vfiler-fzf'
   use 'ibhagwan/fzf-lua'
@@ -21,6 +22,7 @@ require'packer'.startup(function()
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/vim-vsnip"
+  use "luochen1990/rainbow"
 end)
 
 

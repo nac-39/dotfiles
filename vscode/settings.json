@@ -82,7 +82,7 @@
     "python.sortImports.path": "/usr/local/bin/isort",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
-      "source.organizeImports": true,
+      "source.organizeImports": true
     },
     "[typescriptreact]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -112,69 +112,69 @@
     "[bibtex]": {
       // インデント幅を2にする
       "editor.tabSize": 2
-    },
+    }
   },
-      // ---------- LaTeX Workshop ----------
+  // ---------- LaTeX Workshop ----------
 
-    // 使用パッケージのコマンドや環境の補完を有効にする
-    "latex-workshop.intellisense.package.enabled": true,
+  // 使用パッケージのコマンドや環境の補完を有効にする
+  "latex-workshop.intellisense.package.enabled": true,
 
-    // 生成ファイルを削除するときに対象とするファイル
-    // デフォルト値に "*.synctex.gz" を追加
-    "latex-workshop.latex.clean.fileTypes": [
-      "*.aux",
-      "*.bbl",
-      "*.blg",
-      "*.idx",
-      "*.ind",
-      "*.lof",
-      "*.lot",
-      "*.out",
-      "*.toc",
-      "*.acn",
-      "*.acr",
-      "*.alg",
-      "*.glg",
-      "*.glo",
-      "*.gls",
-      "*.ist",
-      "*.fls",
-      "*.log",
-      "*.fdb_ptex2pdf",
-      "*.snm",
-      "*.nav",
-      "*.dvi",
-      "*.synctex.gz"
-    ],
+  // 生成ファイルを削除するときに対象とするファイル
+  // デフォルト値に "*.synctex.gz" を追加
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_ptex2pdf",
+    "*.snm",
+    "*.nav",
+    "*.dvi",
+    "*.synctex.gz"
+  ],
 
-    // 生成ファイルを "out" ディレクトリに吐き出す
-    "latex-workshop.latex.outDir": "out",
+  // 生成ファイルを "out" ディレクトリに吐き出す
+  "latex-workshop.latex.outDir": "out",
 
-    // ビルドのレシピ
-    "latex-workshop.latex.recipes": [
-      {
-        "name": "ptex2pdf",
-        "tools": ["ptex2pdf"]
-      }
-    ],
-    // ビルドのレシピの定義
-    "latex-workshop.latex.tools": [
-      {
-        "name": "ptex2pdf",
-        "command": "ptex2pdf",
-        "args": [
-          "-l",
-          "-ot",
-          // PDFジャンプしたいからsynctexを有効にする
-          "-kanji=utf8 -synctex=1",
-          "-interaction=nonstopmode",
-          "-file-line-error",
-          "-output-directory",
-          "%OUTDIR%",
-          "%DOC%"
-        ]
-      }
-    ],
+  // ビルドのレシピ
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "ptex2pdf",
+      "tools": ["ptex2pdf"]
+    }
+  ],
+  // ビルドのレシピの定義
+  "latex-workshop.latex.tools": [
+    {
+      "name": "ptex2pdf",
+      "command": "ptex2pdf",
+      "args": [
+        "-l",
+        "-ot",
+        // PDFジャンプしたいからsynctexを有効にする
+        "-kanji=utf8 -synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-output-directory",
+        "%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.editorAssociations": {
@@ -197,7 +197,7 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -221,25 +221,27 @@
   },
   "editor.glyphMargin": false,
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "security.workspace.trust.untrustedFiles": "open",
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "markdown.marp.themes": [
-    "./mastering.css",
-    "./nac-39.css"
-  ],
+  "markdown.marp.themes": ["./mastering.css", "./nac-39.css"],
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -250,17 +252,20 @@
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [
-      80
-    ],
+    "editor.rulers": [80],
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
-  "window.zoomLevel": 1,
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "Prettier-SQL.SQLFlavourOverride": "postgresql",
+  "Prettier-SQL.ignoreTabSettings": true,
+  "window.zoomLevel": 1
 }
