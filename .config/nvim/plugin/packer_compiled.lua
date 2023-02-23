@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
-  ["iceberg.vim"] = {
-    loaded = true,
-    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/iceberg.vim",
-    url = "https://github.com/cocopon/iceberg.vim"
-  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -133,6 +128,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  rainbow = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/rainbow",
+    url = "https://github.com/luochen1990/rainbow"
+  },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
+  },
+  ["tender.vim"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/tender.vim",
+    url = "https://github.com/jacoborus/tender.vim"
   },
   ["vfiler-fzf"] = {
     loaded = true,
@@ -168,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["vimdoc-ja"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vimdoc-ja",
+    url = "https://github.com/vim-jp/vimdoc-ja"
   }
 }
 

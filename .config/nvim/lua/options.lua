@@ -28,4 +28,8 @@ vim.cmd([[set iskeyword+=-]])
 
 -- plugin settings
 -- rainbow
-rainbow_active = 1
+vim.g.rainbow_active = 1
+-- rustfmt
+vim.g.rustfmt_autosave = 1
+vim.g.rust_conceal = 1
+vim.g.rustc_path = "/Users/nanaco.s/.cargo/bin/rustc"

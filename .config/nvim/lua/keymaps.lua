@@ -1,3 +1,4 @@
+-- <leader> 
 vim.g.mapleader = " "
 vim.api.nvim_set_keymap('n', '<M-Right>', ':<C-u>bnext<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<M-Left>', ':<C-u>bprevious<CR>', {noremap = true, silent = true})

@@ -183,7 +183,8 @@
   },
   "editor.accessibilitySupport": "off",
   "[python]": {
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": false,
+    "editor.formatOnType": true
   },
   "workbench.preferredDarkColorTheme": "Abyss",
   "[json]": {
@@ -247,7 +248,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "githubPullRequests.pullBranch": "never",
-  "workbench.colorTheme": "Iceberg",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
   "[dart]": {
     "editor.formatOnSave": true,
@@ -267,5 +268,6 @@
   },
   "Prettier-SQL.SQLFlavourOverride": "postgresql",
   "Prettier-SQL.ignoreTabSettings": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "window.zoomLevel": 1
 }

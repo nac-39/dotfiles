@@ -23,6 +23,8 @@ require'packer'.startup(function()
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/vim-vsnip"
   use "luochen1990/rainbow"
+  -- for specific language
+  use "rust-lang/rust.vim"
+  use "vim-jp/vimdoc-ja"
 end)
-
 
