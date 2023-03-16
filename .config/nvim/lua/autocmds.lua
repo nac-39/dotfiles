@@ -1,7 +1,7 @@
 local augroup = vim.api.nvim_create_augroup -- Create/get sutocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
--- Remove whitespace on save 
+-- Remove whitespace on save
 autocmd("BufWritePre", {
 	pattern = "*",
 	command = ":%s/\\s\\+$//e",
@@ -19,3 +19,14 @@ autocmd({ "BufReadPost" }, {
 		vim.api.nvim_exec('silent! normal! g`"zv', false)
 	end,
 })
+
+augroup('coc_ts', {})
+autocmd('FileType', {
+    group = 'coc_ts',
+    pattern = {'typescript', 'typescriptreact'},
+    callback= function() coc_typescript_settings() end
+})
+
+function coc_typescript_settings()
+      vim.api.nvim_buf_set_keymap(0, 'n', '<Plug>(lsp)f', ':CocCommand eslint.executeAutofix<CR>:CocCommand prettier.formatFile<CR>', {silent = true})
+end

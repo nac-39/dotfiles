@@ -1,21 +1,55 @@
--- <leader> 
-vim.g.mapleader = " "
-vim.api.nvim_set_keymap('n', '<M-Right>', ':<C-u>bnext<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<M-Left>', ':<C-u>bprevious<CR>', {noremap = true, silent = true})
+-- <leader>
+vim.g.mapleader = ' '
 
--- 'ibhagwan/fzf-lua' ----------------------------------------------------------
-opt = { noremap = true, silent = true }
-vim.api.nvim_set_keymap('n', '<leader>e', "<cmd>lua require('fzf-lua').files()<CR>", opt)
-vim.api.nvim_set_keymap('n', '<leader>g', "<cmd>lua require('fzf-lua').git_status()<CR>", opt)
-vim.api.nvim_set_keymap('n', '<leader>p', "<cmd>lua require('fzf-lua').live_grep()<CR>", opt)
-vim.api.nvim_set_keymap('n', '<leader>h', "<cmd>lua require('fzf-lua').oldfiles()<CR>", opt)
-vim.api.nvim_set_keymap('n', '<leader>b', "<cmd>lua require('fzf-lua').buffers()<CR>", opt)
--- 'tpope/vim-fugitive' --------------------------------------------------------
-vim.api.nvim_set_keymap('n', '<leader>GG', ':<C-u>Git<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>GC', ':<C-u>Git commit<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>GP', ':<C-u>Git push<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>GL', ':<C-u>Git log --oneline<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>GD', ':<C-u>vert Gdiffsplit !~1', {noremap = true})
 
--- 'fern/vim'
-vim.api.nvim_set_keymap('n', '<silient>', '<Leader>e <Cmd>Fern . -drawer<CR>', {noremap = true})
+opt = {
+    noremap = true,
+    silent = true
+}
+
+function show_documentation()
+  if vim.tbl_contains({'vim', 'help'}, vim.bo.filetype) then
+    vim.cmd('h ' .. vim.fn.expand('<cword>'))
+  elseif vim.fn['coc#rpc#ready']() then
+    vim.fn['CocActionAsync']('doHover')
+  end
+end
+
+-- normal mode
+for k, v in pairs({
+    ['<M-Right>'] = ':<C-u>bnext<CR>',
+    ['<M-Left>'] = ':<C-u>bprevious<CR>',
+    -- fzf
+    ['<leader>e'] = "<cmd>lua require('fzf-lua').files()<CR>",
+    ['<leader>g'] = "<cmd>lua require('fzf-lua').git_status()<CR>",
+    ['<leader>p'] = "<cmd>lua require('fzf-lua').live_grep()<CR>",
+    ['<leader>h'] = "<cmd>lua require('fzf-lua').oldfiles()<CR>",
+    ['<leader>b'] = "<cmd>lua require('fzf-lua').buffers()<CR>",
+    -- 'tpope/vim-fugitive'
+    ['<leader>GG'] = ':<C-u>Git<CR>',
+    ['<leader>GC'] = ':<C-u>Git commit<CR>',
+    ['<leader>GP'] = ':<C-u>Git push<CR>',
+    ['<leader>GL'] = ':<C-u>Git log --oneline<CR>',
+    ['<leader>GD'] = ':<C-u>vert Gdiffsplit !~1',
+    -- 'lambdalisue/fern.vim'
+    ['<leader>f'] = '<Cmd>Fern . -drawer<CR>',
+    ['<leader>F'] = '<Cmd>Fern . -drawer -reveal=%<CR>',
+    -- coc.vim
+    ['K'] = ':call v:lua.show_documentation()<CR>',
+}) do
+    vim.api.nvim_set_keymap('n', k, v, opt)
+end
+
+opt1 = {
+    noremap = true,
+    silent = true,
+    expr = true,
+}
+-- insert mode
+for k, v in pairs({
+    -- coc.vim
+    ['<M-r>'] = 'coc#refresh()'
+})do
+    vim.api.nvim_set_keymap('i', k, v, opt1)
+end
+

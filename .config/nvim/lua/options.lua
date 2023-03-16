@@ -33,3 +33,8 @@ vim.g.rainbow_active = 1
 vim.g.rustfmt_autosave = 1
 vim.g.rust_conceal = 1
 vim.g.rustc_path = "/Users/nanaco.s/.cargo/bin/rustc"
+
+-- coc.nvim
+vim.g.coc_global_extensions = {'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists'}
+
+

@@ -6,6 +6,7 @@ require'packer'.startup(function()
   use 'vim-airline/vim-airline-themes'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
+  use 'lambdalisue/fern.vim'
   -- lsp
   use 'neoclide/coc.nvim'
   use 'nvim-treesitter/nvim-treesitter'
