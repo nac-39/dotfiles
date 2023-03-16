@@ -88,7 +88,8 @@ export PATH=/usr/local/bin/code:$PATH
 # flutter
 export  PATH=$PATH:~/.local/bin/flutter/bin
 
-
+export PATH=$HOME/.anyenv/bin:$PATH
+export PATH=$HOME/.nodenv/bin:$PATH
 ############
 # エイリアス #
 ############
@@ -151,7 +152,9 @@ if [ -f '${HOME}/google-cloud-sdk/completion.zsh.inc' ]; then . '${HOME}/google-
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# anyenv
 eval "$(anyenv init -)"
+eval "$(nodenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

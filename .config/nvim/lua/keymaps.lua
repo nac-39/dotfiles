@@ -17,3 +17,5 @@ vim.api.nvim_set_keymap('n', '<leader>GP', ':<C-u>Git push<CR>', {noremap = true
 vim.api.nvim_set_keymap('n', '<leader>GL', ':<C-u>Git log --oneline<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>GD', ':<C-u>vert Gdiffsplit !~1', {noremap = true})
 
+-- 'fern/vim'
+vim.api.nvim_set_keymap('n', '<silient>', '<Leader>e <Cmd>Fern . -drawer<CR>', {noremap = true})
