@@ -36,5 +36,6 @@ vim.g.rustc_path = "/Users/nanaco.s/.cargo/bin/rustc"
 
 -- coc.nvim
 vim.g.coc_global_extensions = {'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists'}
-
-
+-- fern.vim
+vim.g['fern#default_hidden'] = 1
+vim.g['fern#renderer'] = 'nerdfont'

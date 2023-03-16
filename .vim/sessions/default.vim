@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/dotfiles/.config/nvim
+cd ~/workspace/dev/nu-shinkan
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,18 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 ~/dotfiles/.config/nvim
-badd +34 lua/keymaps.lua
-badd +40 lua/options.lua
-badd +31 lua/autocmds.lua
-badd +3 lua/plugins.lua
-badd +82 plugin/packer_compiled.lua
+badd +1 ~/workspace/dev/nu-shinkan
+badd +1 pages/index.vue
+badd +22 middleware/auth.global.ts
 argglobal
 %argdel
-$argadd ~/dotfiles/.config/nvim
+$argadd ~/workspace/dev/nu-shinkan
 argglobal
 enew
-file fern://drawer:1/file:///Users/nanaco.s/dotfiles/.config/nvim;\$
+file fern://drawer:1/file:///Users/nanaco.s/workspace/dev/nu-shinkan;\$
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -33,7 +30,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd ~/dotfiles/.config/nvim
+lcd ~/workspace/dev/nu-shinkan
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

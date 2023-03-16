@@ -4,9 +4,14 @@ require'packer'.startup(function()
   use 'wbthomason/packer.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
+  -- fern.vim
   use 'lambdalisue/fern.vim'
+  use 'lambdalisue/fern-git-status.vim'
+  use 'lambdalisue/fern-renderer-nerdfont.vim'
+  use 'lambdalisue/nerdfont.vim'
   -- lsp
   use 'neoclide/coc.nvim'
   use 'nvim-treesitter/nvim-treesitter'
