@@ -34,6 +34,7 @@ for k, v in pairs({
     -- 'lambdalisue/fern.vim'
     ['<leader>f'] = '<Cmd>Fern . -drawer -toggle<CR>',
     ['<leader>F'] = '<Cmd>Fern . -drawer -reveal=%<CR>',
+    ['<M-f'] = '<Cmd>Format<CR>',
     -- coc.vim
     ['K'] = ':call v:lua.show_documentation()<CR>',
 }) do

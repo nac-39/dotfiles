@@ -26,5 +26,6 @@ require'packer'.startup(function()
   -- for specific language
   use "rust-lang/rust.vim"
   use "vim-jp/vimdoc-ja"
+  use "github/copilot.vim"
 end)
 
