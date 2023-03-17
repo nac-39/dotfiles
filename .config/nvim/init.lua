@@ -5,4 +5,5 @@ require'base'
 require'options'
 require'keymaps'
 require'lsp'
-require'cmpcmp'
+require'commands'
+require('bufferline').setup{}

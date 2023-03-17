@@ -17,6 +17,7 @@ local options = {
 	shiftwidth = 4,
 	swapfile = false,
 	ambiwidth = "single",
+    termguicolors = true,
 }
 
 for k, v in pairs(options) do

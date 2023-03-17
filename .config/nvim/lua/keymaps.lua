@@ -32,7 +32,7 @@ for k, v in pairs({
     ['<leader>GL'] = ':<C-u>Git log --oneline<CR>',
     ['<leader>GD'] = ':<C-u>vert Gdiffsplit !~1',
     -- 'lambdalisue/fern.vim'
-    ['<leader>f'] = '<Cmd>Fern . -drawer<CR>',
+    ['<leader>f'] = '<Cmd>Fern . -drawer -toggle<CR>',
     ['<leader>F'] = '<Cmd>Fern . -drawer -reveal=%<CR>',
     -- coc.vim
     ['K'] = ':call v:lua.show_documentation()<CR>',

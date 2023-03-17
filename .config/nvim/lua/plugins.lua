@@ -4,6 +4,8 @@ require'packer'.startup(function()
   use 'wbthomason/packer.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  -- colorscheme
   use 'navarasu/onedark.nvim'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
