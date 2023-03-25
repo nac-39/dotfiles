@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/nanaco/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/nanaco/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/nanaco/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/nanaco/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/nanaco/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/nanaco.s/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/nanaco.s/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/nanaco.s/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/nanaco.s/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/nanaco.s/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,102 +76,117 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-pairs"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
+  },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["coc.nvim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
   },
   ["fern-git-status.vim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/fern-git-status.vim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fern-git-status.vim",
     url = "https://github.com/lambdalisue/fern-git-status.vim"
   },
   ["fern-renderer-nerdfont.vim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/fern-renderer-nerdfont.vim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fern-renderer-nerdfont.vim",
     url = "https://github.com/lambdalisue/fern-renderer-nerdfont.vim"
   },
   ["fern.vim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/fern.vim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fern.vim",
     url = "https://github.com/lambdalisue/fern.vim"
   },
   ["fzf-lua"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/fzf-lua",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
   ["nerdfont.vim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/nerdfont.vim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/nerdfont.vim",
     url = "https://github.com/lambdalisue/nerdfont.vim"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/onedark.nvim",
     url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   rainbow = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/rainbow",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/rainbow",
     url = "https://github.com/luochen1990/rainbow"
   },
   ["rust.vim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/rust.vim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
   },
   ["tender.vim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/tender.vim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/tender.vim",
     url = "https://github.com/jacoborus/tender.vim"
   },
   ["vfiler-fzf"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/vfiler-fzf",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vfiler-fzf",
     url = "https://github.com/obaland/vfiler-fzf"
   },
   ["vfiler.vim"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/vfiler.vim",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vfiler.vim",
     url = "https://github.com/obaland/vfiler.vim"
   },
   ["vim-airline"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/vim-airline",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-airline",
     url = "https://github.com/vim-airline/vim-airline"
   },
   ["vim-airline-themes"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-gitgutter"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
   ["vimdoc-ja"] = {
     loaded = true,
-    path = "/home/nanaco/.local/share/nvim/site/pack/packer/start/vimdoc-ja",
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vimdoc-ja",
     url = "https://github.com/vim-jp/vimdoc-ja"
   }
 }
