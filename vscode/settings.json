@@ -227,7 +227,7 @@
   },
   "security.workspace.trust.untrustedFiles": "open",
   "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "markdown.marp.themes": [
     "./mastering.css",
@@ -282,8 +282,8 @@
   "github.copilot.enable": {
     "*": true,
     "yaml": true,
-    "plaintext": false,
-    "markdown": false
+    "plaintext": true,
+    "markdown": true
   },
   "editor.inlineSuggest.enabled": true,
   "[scss]": {
