@@ -65,3 +65,7 @@
 !/LICENSE
 !.gitignore
 !.gitkeep
+!/Brewfile
+!/.yabairc
+!/.skhdrc
+!/install.sh
