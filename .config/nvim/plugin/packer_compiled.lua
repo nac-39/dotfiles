@@ -149,21 +149,6 @@ _G.packer_plugins = {
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
   },
-  ["tender.vim"] = {
-    loaded = true,
-    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/tender.vim",
-    url = "https://github.com/jacoborus/tender.vim"
-  },
-  ["vfiler-fzf"] = {
-    loaded = true,
-    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vfiler-fzf",
-    url = "https://github.com/obaland/vfiler-fzf"
-  },
-  ["vfiler.vim"] = {
-    loaded = true,
-    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vfiler.vim",
-    url = "https://github.com/obaland/vfiler.vim"
-  },
   ["vim-airline"] = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-airline",
