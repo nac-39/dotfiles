@@ -71,7 +71,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # PYTHON_HOMEにインストールしたpythonのパスを指定する
-export PYTHON_HOME="/Users/nanaco.s/.pyenv/"
+export PYTHON_HOME="${HOME}/.pyenv/"
 export PATH="$PYTHON_HOME:$PATH"
 
 # nodebrew 
@@ -111,6 +111,9 @@ alias ll='ls -alFG'
 # rmは丁寧に扱う
 alias rm="rm -i"
 
+# git
+alias g="git"
+
 # docker-composeのエイリアス
 alias doc='docker-compose' 
 
@@ -133,7 +136,7 @@ alias vimemo="nvim /tmp/memo.txt && cat /tmp/memo.txt | pbcopy && \rm /tmp/memo.
 alias karabiner_cli="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli"
 
 alias kli="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli --select-profile lily58"
-alias kmac="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli --select-profile Mac"
+alias kmac="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli --select-profile 'Mac Internal Keyboard'"
 alias kfi="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli --select-profile FILCO"
 
 # ある地点の天気を表示するエイリアス
@@ -145,6 +148,7 @@ alias cat="bat -pP"
 # git
 alias g="git"
 
+alias nv="nvim"
 # zshの設定
 ##########
 # cd -の後にタブ補完でサジェストされるようにする

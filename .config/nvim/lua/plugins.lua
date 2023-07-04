@@ -22,6 +22,8 @@ require'packer'.startup(function()
   use 'ibhagwan/fzf-lua'
   use 'jiangmiao/auto-pairs'
   use "luochen1990/rainbow"
+  -- コードをコメント化する
+  use "numToStr/Comment.nvim"
   -- for specific language
   use "rust-lang/rust.vim"
   use "vim-jp/vimdoc-ja"

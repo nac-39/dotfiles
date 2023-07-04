@@ -3,8 +3,19 @@
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
-      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ],
       "filetypes": ["haskell", "lhaskell"]
+    },
+    "jedi": {
+      "enable": true,
+      "startupMessage": false,
+      "executable.command": "~/.pyenv/shims/jedi-language-server"
     }
   }
 }
