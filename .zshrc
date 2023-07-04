@@ -90,6 +90,13 @@ export  PATH=$PATH:~/.local/bin/flutter/bin
 
 export PATH=$HOME/.anyenv/bin:$PATH
 export PATH=$HOME/.nodenv/bin:$PATH
+
+# node管理
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# batの環境変数
+export BAT_THEME=TwoDark
 ############
 # エイリアス #
 ############
@@ -132,6 +139,12 @@ alias kfi="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabin
 # ある地点の天気を表示するエイリアス
 alias tenki="~/workspace/utility/tenki.sh"           ##########
 
+# catをbatにする
+alias cat="bat -pP"
+
+# git
+alias g="git"
+
 # zshの設定
 ##########
 # cd -の後にタブ補完でサジェストされるようにする
@@ -173,4 +186,3 @@ man() {
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
