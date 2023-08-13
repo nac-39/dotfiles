@@ -69,3 +69,4 @@
 !/.yabairc
 !/.skhdrc
 !/install.sh
+!.wezterm.lua
