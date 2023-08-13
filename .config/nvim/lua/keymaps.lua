@@ -8,11 +8,11 @@ opt = {
 }
 
 function show_documentation()
-  if vim.tbl_contains({'vim', 'help'}, vim.bo.filetype) then
-    vim.cmd('h ' .. vim.fn.expand('<cword>'))
-  elseif vim.fn['coc#rpc#ready']() then
-    vim.fn['CocActionAsync']('doHover')
-  end
+    if vim.tbl_contains({ 'vim', 'help' }, vim.bo.filetype) then
+        vim.cmd('h ' .. vim.fn.expand('<cword>'))
+    elseif vim.fn['coc#rpc#ready']() then
+        vim.fn['CocActionAsync']('doHover')
+    end
 end
 
 -- normal mode
@@ -20,7 +20,7 @@ for k, v in pairs({
     ['<M-Right>'] = ':<C-u>bnext<CR>',
     ['<M-Left>'] = ':<C-u>bprevious<CR>',
     -- fzf
-    ['<leader>e'] = "<cmd>lua require('fzf-lua').files()<CR>",
+    ['<leader>e'] = "<cmd>lua require('fzf-lua').git_files()<CR>",
     ['<leader>g'] = "<cmd>lua require('fzf-lua').git_status()<CR>",
     ['<leader>p'] = "<cmd>lua require('fzf-lua').live_grep()<CR>",
     ['<leader>h'] = "<cmd>lua require('fzf-lua').oldfiles()<CR>",
@@ -51,7 +51,6 @@ opt1 = {
 for k, v in pairs({
     -- coc.vim
     ['<M-r>'] = 'coc#refresh()'
-})do
+}) do
     vim.api.nvim_set_keymap('i', k, v, opt1)
 end
-

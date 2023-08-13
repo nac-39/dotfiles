@@ -32,7 +32,16 @@ export LANG=ja_JP.UTF-8
 # 日本語のファイル名を表示する
 setopt print_eight_bit
 
+#########################
+# control-rをfzfにする
+#########################
 
+function select-history() {
+  BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  CURSOR=$#BUFFER
+}
+zle -N select-history
+bindkey '^r' select-history
 
 #########################
 # zsh-syntax-highlighting

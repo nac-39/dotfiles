@@ -20,6 +20,8 @@ require'packer'.startup(function()
   use 'nvim-treesitter/nvim-treesitter'
   --
   use 'ibhagwan/fzf-lua'
+  use 'junegunn/fzf'
+  use 'junegunn/fzf.vim'
   use 'jiangmiao/auto-pairs'
   use "luochen1990/rainbow"
   -- コードをコメント化する
