@@ -16,6 +16,12 @@
       "enable": true,
       "startupMessage": false,
       "executable.command": "~/.pyenv/shims/jedi-language-server"
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   }
 }

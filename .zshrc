@@ -91,6 +91,7 @@ export PATH=/usr/local/bin/code:$PATH
 
 # rbenv経由でダウンロードしたrubyのパスを通す
 [[ -d ~/.rbenv  ]] && \
+  export RBENV_ROOT="$HOME/.rbenv" && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
 
@@ -104,8 +105,10 @@ export PATH=$HOME/.nodenv/bin:$PATH
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
+export PATH=$HOME/.progate/bin:$PATH
 # batの環境変数
 export BAT_THEME=TwoDark
+
 ############
 # エイリアス #
 ############
@@ -199,3 +202,4 @@ man() {
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
