@@ -114,10 +114,20 @@ _G.packer_plugins = {
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fern.vim",
     url = "https://github.com/lambdalisue/fern.vim"
   },
+  fzf = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fzf",
+    url = "https://github.com/junegunn/fzf"
+  },
   ["fzf-lua"] = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
   },
   ["nerdfont.vim"] = {
     loaded = true,
@@ -178,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vimdoc-ja",
     url = "https://github.com/vim-jp/vimdoc-ja"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

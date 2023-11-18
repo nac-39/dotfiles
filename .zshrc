@@ -20,10 +20,10 @@ source ~/.zsh/zsh-z.plugin.zsh
 zstyle ':completion:*' menu select
 if [ -n "$SSH_CONNECTION" ]; then
   PROMPT='%F{magenta}%n%f@%m%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
-%# '
+|･ω･｀)> '
 else
   PROMPT='%F{magenta}%n%f%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
-%# '
+|･ω･｀)> '
 fi
 
 # 日本語が文字化けしないようにする
@@ -93,6 +93,8 @@ export PATH=/usr/local/bin/code:$PATH
 [[ -d ~/.rbenv  ]] && \
   export RBENV_ROOT="$HOME/.rbenv" && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  export GEM_HOME=$HOME/.gem && \
+  export PATH=$GEM_HOME/bin:$PATH && \
   eval "$(rbenv init -)"
 
 # flutter
@@ -108,6 +110,12 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH=$HOME/.progate/bin:$PATH
 # batの環境変数
 export BAT_THEME=TwoDark
+
+# dartのパッケージ
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# goのbinary
+export PATH="$PATH":"$HOME/go/bin"
 
 ############
 # エイリアス #

@@ -30,5 +30,6 @@ require'packer'.startup(function()
   use "rust-lang/rust.vim"
   use "vim-jp/vimdoc-ja"
   use "github/copilot.vim"
+  use "folke/which-key.nvim"
 end)
 

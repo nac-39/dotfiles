@@ -13,11 +13,12 @@ local options = {
     expandtab = true,
     showcmd = true,
     hlsearch = true,
-    pumblend = 20,
     shiftwidth = 4,
     swapfile = false,
     ambiwidth = "single",
     termguicolors = true,
+    winblend = 0, -- ウィンドウの不透明度
+    pumblend = 0, -- ポップアップメニューの不透明度
 }
 
 for k, v in pairs(options) do
