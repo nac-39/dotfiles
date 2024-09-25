@@ -69,7 +69,8 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-5]='fg=cyan,bold'
 # カーソルがある場所の括弧にマッチする括弧
 ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]='standout'
 
-
+# 1passwordの補完を有効にする
+eval "$(op completion zsh)"; compdef _op op
 
 ######
 # path

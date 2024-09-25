@@ -29,20 +29,32 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
 
 -- plugin settings
--- rainbow
-vim.g.rainbow_active = 1
--- rustfmt
-vim.g.rustfmt_autosave = 1
-vim.g.rust_conceal = 1
-vim.g.rustc_path = "/Users/nanaco.s/.cargo/bin/rustc"
 
 -- coc.nvim
-vim.g.coc_global_extensions = { 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists' }
--- fern.vim
-vim.g['fern#default_hidden'] = 1
-vim.g['fern#renderer'] = 'nerdfont'
 
--- coc-rust-analyzer
-vim.g.rustfmt_autosave = 1
-vim.g.rust_analyzer_cargo_watch_enable = 1
+-- グローバル変数の設定
+local global_options = {
+    -- vim-sandwich
+    sandwich_no_default_key_mappings = 1,
+    operator_sandwich_no_default_key_mappingss = 1,
 
+    -- coc.vim
+    coc_global_extensions = { 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists' },
+
+    -- rainbow
+    rainbow_active = 1,
+    -- rustfmt
+    rustfmt_autosave = 1,
+    rust_conceal = 1,
+    rustc_path = "/Users/nanaco.s/.cargo/bin/rustc",
+
+    -- fern.vim
+    fern_default_hidden = 1,
+    fern_renderer = 'nerdfont',
+}
+
+
+
+for k, v in pairs(global_options) do
+    vim.g[k] = v
+end
