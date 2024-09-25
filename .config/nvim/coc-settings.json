@@ -22,9 +22,84 @@
       "args": ["start"],
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
+    },
+    "golang": {
+        "command": "gopls",
+        "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+        "filetypes": ["go"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes":[
-      "go"
-  ]
+  "diagnostic-languageserver.filetypes": {
+    "python": ["ruff"],
+    "typescript": ["eslint"],
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "python": ["black", "isort"],
+    "typescript": ["prettier"],
+    "json": ["prettier"],
+  },
+  "diagnostic-languageserver.linters": {
+    "flake8": {
+      "command": "flake8",
+      "debounce": 100,
+      "args": ["--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s", "-"],
+      "offsetLine": 0,
+      "offsetColumn": 0,
+      "sourceName": "flake8",
+      "formatLines": 1,
+      "formatPattern": [
+        "(\\d+),(\\d+),([A-Z]),(.*)(\\r|\\n)*$",
+        {
+          "line": 1,
+          "column": 2,
+          "security": 3,
+          "message": 4
+        }
+      ],
+      "securities": {
+        "W": "warning",
+        "E": "error",
+        "F": "error",
+        "C": "error",
+        "N": "error"
+      }
+    },
+    "eslint": {
+      "command": "eslint_d",
+      "debounce": 100,
+      "args": ["--stdin", "--stdin-filename", "%filepath", "--format", "json"],
+      "offsetLine": 0,
+      "offsetColumn": 0,
+      "sourceName": "eslint",
+      "formatLines": 1,
+      "formatPattern": [
+        "^\\s+(\\d+):(\\d+)\\s+(error|warning)\\s+(.*)$",
+        {
+          "line": 1,
+          "column": 2,
+          "security": 3,
+          "message": 4
+        }
+      ],
+      "securities": {
+        "error": "error",
+        "warning": "warning"
+      }
+    }
+  },
+  "diagnostic-languageserver.formatters": {
+    "black": {
+      "command": "black",
+      "args": ["--quiet", "-"]
+    },
+    "isort": {
+      "command": "isort",
+      "args": ["-q", "-"]
+    },
+    "pretier": {
+      "command": "prettier",
+      "args": ["--stdin-filepath", "stdin"]
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["go"]
 }

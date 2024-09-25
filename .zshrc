@@ -1,5 +1,5 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 ##########
 # 見た目関連
 ###########
@@ -20,10 +20,10 @@ source ~/.zsh/zsh-z.plugin.zsh
 zstyle ':completion:*' menu select
 if [ -n "$SSH_CONNECTION" ]; then
   PROMPT='%F{magenta}%n%f@%m%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
-|･ω･｀)> '
+%F{yellow}%#%f '
 else
   PROMPT='%F{magenta}%n%f%  %F{blue}%~%f  %F{red}$(__git_ps1 "%s")%f
-|･ω･｀)> '
+%F{yellow}%#%f '
 fi
 
 # 日本語が文字化けしないようにする
@@ -98,7 +98,9 @@ export PATH=/usr/local/bin/code:$PATH
   eval "$(rbenv init -)"
 
 # flutter
-export  PATH=$PATH:~/.local/bin/flutter/bin
+# export  PATH=$PATH:~/.local/bin/flutter/bin
+export PATH=$HOME/fvm/default/bin:$PATH
+
 
 export PATH=$HOME/.anyenv/bin:$PATH
 export PATH=$HOME/.nodenv/bin:$PATH
@@ -208,6 +210,11 @@ man() {
             man "$@"
 }
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/nanaco.s/.dart-cli-completion/zsh-config.zsh ]] && . /Users/nanaco.s/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
 

@@ -42,3 +42,7 @@ vim.g.coc_global_extensions = { 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'c
 vim.g['fern#default_hidden'] = 1
 vim.g['fern#renderer'] = 'nerdfont'
 
+-- coc-rust-analyzer
+vim.g.rustfmt_autosave = 1
+vim.g.rust_analyzer_cargo_watch_enable = 1
+
