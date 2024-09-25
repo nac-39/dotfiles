@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-sandwich"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vim-sandwich",
+    url = "https://github.com/machakann/vim-sandwich"
+  },
   ["vimdoc-ja"] = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/vimdoc-ja",

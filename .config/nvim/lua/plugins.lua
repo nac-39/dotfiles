@@ -4,7 +4,7 @@ require'packer'.startup(function()
   use 'wbthomason/packer.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
   -- colorscheme
   use 'navarasu/onedark.nvim'
   -- git
@@ -26,6 +26,7 @@ require'packer'.startup(function()
   use "luochen1990/rainbow"
   -- コードをコメント化する
   use "numToStr/Comment.nvim"
+  use 'machakann/vim-sandwich' -- かっこ
   -- for specific language
   use "rust-lang/rust.vim"
   use "vim-jp/vimdoc-ja"
