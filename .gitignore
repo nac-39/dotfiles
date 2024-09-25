@@ -70,3 +70,4 @@
 !/.skhdrc
 !/install.sh
 !.wezterm.lua
+!/.hammerspoon/*.lua
