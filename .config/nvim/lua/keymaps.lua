@@ -2,7 +2,7 @@
 vim.g.mapleader = ' '
 
 
-opt = {
+local opt = {
     noremap = true,
     silent = true
 }
@@ -42,7 +42,7 @@ for k, v in pairs({
     vim.api.nvim_set_keymap('n', k, v, opt)
 end
 
-opt1 = {
+local opt1 = {
     noremap = true,
     silent = true,
     expr = true,

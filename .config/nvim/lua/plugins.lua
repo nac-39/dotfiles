@@ -1,6 +1,6 @@
  vim.cmd[[packadd packer.nvim]]
 
-require'packer'.startup(function()
+require'packer'.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
@@ -15,6 +15,7 @@ require'packer'.startup(function()
   use 'lambdalisue/fern-git-status.vim'
   use 'lambdalisue/fern-renderer-nerdfont.vim'
   use 'lambdalisue/nerdfont.vim'
+  use 'lambdalisue/glyph-palette.vim'
   -- lsp
   use 'neoclide/coc.nvim'
   use 'nvim-treesitter/nvim-treesitter'
