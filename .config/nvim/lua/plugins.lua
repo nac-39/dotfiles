@@ -33,5 +33,9 @@ require'packer'.startup(function(use)
   use "vim-jp/vimdoc-ja"
   use "github/copilot.vim"
   use "folke/which-key.nvim"
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
 end)
 
