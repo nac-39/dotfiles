@@ -94,6 +94,13 @@ _G.packer_plugins = {
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["command-t"] = {
+    config = { "\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21wincent.commandt\frequire\0" },
+    loaded = true,
+    needs_bufread = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/opt/command-t",
+    url = "https://github.com/wincent/command-t"
+  },
   ["copilot.vim"] = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/copilot.vim",
@@ -133,6 +140,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/glyph-palette.vim",
     url = "https://github.com/lambdalisue/glyph-palette.vim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/nanaco.s/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["nerdfont.vim"] = {
     loaded = true,
@@ -207,6 +219,17 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: command-t
+time([[Setup for command-t]], true)
+try_loadstring("\27LJ\2\nE\0\0\2\0\4\0\0056\0\0\0009\0\1\0'\1\3\0=\1\2\0K\0\1\0\blua$CommandTPreferredImplementation\6g\bvim\0", "setup", "command-t")
+time([[Setup for command-t]], false)
+time([[packadd for command-t]], true)
+vim.cmd [[packadd command-t]]
+time([[packadd for command-t]], false)
+-- Config for: command-t
+time([[Config for command-t]], true)
+try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21wincent.commandt\frequire\0", "config", "command-t")
+time([[Config for command-t]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

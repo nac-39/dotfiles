@@ -26,6 +26,9 @@ for k, v in pairs({
     ['<leader>fh'] = "<cmd>lua require('fzf-lua').oldfiles()<CR>",
     ['<leader>fb'] = "<cmd>lua require('fzf-lua').buffers()<CR>",
     ['<leader>fp'] = "<cmd>lua require('fzf-lua').files()<CR>",
+    ['<leader>t'] = "<cmd>lua require('fzf-lua').treesitter()<CR>",
+    -- command-t
+    ['<leader>p'] = "<Cmd>:CommandTRipgrep<CR>",
     -- 'tpope/vim-fugitive'
     ['<leader>gg'] = ':<C-u>Git<CR>',
     ['<leader>gc'] = ':<C-u>Git commit<CR>',
