@@ -166,7 +166,7 @@ alias kfi="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabin
 alias tenki="~/workspace/utility/tenki.sh"           ##########
 
 # catをbatにする
-alias cat="bat -pP"
+alias cat="batcat -pP"
 
 # git
 alias g="git"
@@ -219,3 +219,5 @@ man() {
 [[ -f /Users/nanaco.s/.dart-cli-completion/zsh-config.zsh ]] && . /Users/nanaco.s/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+. "$HOME/.cargo/env"

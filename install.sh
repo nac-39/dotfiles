@@ -8,30 +8,61 @@ THIS_DIR=$(cd $(dirname $0); pwd)
 cd $THIS_DIR
 
 echo "start setup..."
-#------------------------------------------
-# homebrew(arm64)
-#------------------------------------------
-echo "homebrewをインストールします..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo "brew doctorを実行します..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew doctor
+# check volta exists
+if ! command -v volta &> /dev/null
+then
+    echo "install volta"
+    # install Volta
+    curl https://get.volta.sh | bash
+else
+    echo "volta is already installed"
+    volta -v
+fi
 
-echo "brew updateを実行します..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew update --verbose
+# check uv exists
+if ! command -v uv &> /dev/null
+then
+    echo "install uv"
+    # On macOS and Linux.
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+else
+    echo "uv is already installed"
+    uv -v
+fi
 
-echo "brew upgradeを実行します..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew upgrade --verbose
+# 環境ごとの初期設定
+if uname -a | grep -sq "Ubuntu"; then
+  # Ubuntu
+  echo "-------------"
+  echo "ubuntu setup"
+elif [ "$(uname)" = "Darwin" ]; then
+  # macOS
+    #------------------------------------------
+    # homebrew(arm64)
+    #------------------------------------------
+    echo "homebrewをインストールします..."
+    which /opt/homebrew/bin/brew >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    
+    echo "brew doctorを実行します..."
+    which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew doctor
+    
+    echo "brew updateを実行します..."
+    which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew update --verbose
+    
+    echo "brew upgradeを実行します..."
+    which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew upgrade --verbose
+    
+    echo ".Brewfileで管理しているアプリケーションをインストールします..."
+    which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ./.Brewfile --verbose
+    
+    echo "brew cleanupを実行します..."
+    which brew >/dev/null 2>&1 && brew cleanup --verbose
+    
+    echo "Installing some software & library..."
+    brew bundle -v --file=~/dotfiles/Brewfile
 
-echo ".Brewfileで管理しているアプリケーションをインストールします..."
-which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ./.Brewfile --verbose
-
-echo "brew cleanupを実行します..."
-which brew >/dev/null 2>&1 && brew cleanup --verbose
-
-echo "Installing some software & library..."
-brew bundle -v --file=~/dotfiles/Brewfile
-
+fi
 # zsh関連
 [ -e ~/.zsh ] || mkdir -p ~/.zsh
 [ -e ~/.zsh/git-prompt.zsh ] || curl https://raw.githubusercontent.com/woefe/git-prompt.zsh/master/git-prompt.zsh > .zsh/git-prompt.zsh
