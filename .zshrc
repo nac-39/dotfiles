@@ -221,3 +221,9 @@ man() {
 
 
 . "$HOME/.cargo/env"
+# 環境ごとの設定
+if uname -a | grep -sq "Ubuntu"; then
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+    alias cat="batcat -pP"
+fi
