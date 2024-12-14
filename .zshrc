@@ -166,7 +166,7 @@ alias kfi="/Library/Application\ Support/org.pqrs/Karabiner-Elements/bin/karabin
 alias tenki="~/workspace/utility/tenki.sh"           ##########
 
 # catをbatにする
-alias cat="batcat -pP"
+alias cat="bat -pP"
 
 # git
 alias g="git"
